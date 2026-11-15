@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .site-header {
+      background: #000000;
+      color: black;
+      text-color: white;
+      font-family: Arial;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-header a {
+      color: black;
+      text-color: white;
+      font-family: Helvetica, Arial;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .document {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <strong>"&lt;DSI&#8725;&gt;"</strong>
+
+    <nav>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="https://digital-safety-initiative.org">DSI</a>
+      <a href="https://github.com/tomcollinsworcs/digital-product-safety">Contribute</a>
+    </nav>
+  </header>
+
+  <main class="document">
+    {{ content }}
+  </main>
+
+</body>
+</html>
