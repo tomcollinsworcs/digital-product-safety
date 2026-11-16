@@ -1,67 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ title }}</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Proposed Digital Product Safety Regulations"/>
-    <meta name="author" content="Tom Collins MP et al"/>
-    <style type="text/css">
-        html { scroll-behavior: smooth; font-family: Arial, Helvetica, sans-serif; }
-        body { overflow-x: auto; }
-        table, th, td {border: 1px solid black; border-collapse: collapse; padding: 4px; }
-        @media print { @page {size: 892px 1262px;} }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | escape }}">
+  <title>{{ page.title | default: site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .site-header {
-      background: #000000;
-      color: black;
-      text-color: white;
-      font-family: Arial;
-      padding: 16px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .site-header a {
-      color: black;
-      text-color: white;
-      font-family: Helvetica, Arial;
-      text-decoration: none;
-      margin-left: 20px;
-    }
-
-    .document {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 24px;
-    }
-  </style>
-</head>
-
 <body>
-
   <header class="site-header">
-    <strong>"&lt;DSI&#8725;&gt;"</strong>
-
-    <nav>
-      <a href="{{ '/' | relative_url }}">Home</a>
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Document home">&lt;DSI&#8725;&gt;</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}">Document</a>
       <a href="https://digital-safety-initiative.org">DSI</a>
-      <a href="https://github.com/tomcollinsworcs/digital-product-safety">Contribute</a>
+      <a href="https://github.com/tomcollinsworcs/digital-product-safety">Contribute on GitHub</a>
     </nav>
   </header>
 
-  <main class="document">
+  <main class="document" id="main-content">
     {{ content }}
   </main>
-
 </body>
 </html>
